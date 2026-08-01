@@ -232,7 +232,7 @@ If SHEIN displays a cookie consent popup or a verification page (CAPTCHA):
 
 The authenticated Chrome session will be saved inside the `ChromeProfile/` directory and reused by future scraping sessions.
 
-> **Note:** This step usually needs to be performed only once. After the initial session is saved, the scraper automatically reuses the Chrome profile and attempts to solve future verification challenges using Gemini Vision AI. However, depending on SHEIN's anti-bot protection or session expiration, occasional manual verification may still be required.
+> **Note:** This step usually needs to be performed only once. After the initial session is saved, the scraper automatically reuses the Chrome profile and attempts to solve future verification challenges using Gemini Vision AI. 
 
 ## Step 6 — Run the Complete Pipeline
 
