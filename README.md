@@ -201,7 +201,7 @@ GEMINI_API_KEY=your_gemini_api_key_here
 ### Multiple API Keys (Recommended)
 
 ```env
-GEMINI_API_KEY=OwnerA:KEY_A,OwnerB:KEY_B,OwnerC:KEY_C
+GEMINI_API_KEY=Main:KEY_A,Backup:KEY_B,University:KEY_C
 ```
 
 > **Tip:** Legacy comma-separated API keys are also supported and will be automatically named (`key_1`, `key_2`, ...).
