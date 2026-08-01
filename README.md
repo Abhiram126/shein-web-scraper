@@ -566,26 +566,41 @@ flowchart TD
 3. A fresh screenshot is captured and sent to **Gemini Vision**.
 4. Gemini returns a **structured JSON** action plan:
    ```json
-   ],
-    "current_price_integer": "2",
-    "current_price_decimal": "00",
+     },
+  {
+    "url": "https://us.shein.com/1-10pcs-Silicone-Scalp-Massage-Brush-Set-Including-1pc-200ml-High-Pressure-Continuous-Spray-Bottle-3pcs-Hair-Styling-Brushes-Hair-Accessories-p-38087056.html",
+    "name": "1 - 10Pcs Silicone Scalp Massage Brush Set Including 1Pc 200Ml High Pressure",
+    "product_name_safe": "1 - 10Pcs Silicone Scalp Massage Brush Set Including 1Pc 200Ml High Pressure",
+    "sku": "sc2407011909390033",
+    "reviews": "4.85 4.85 Review Policy",
+    "available_sizes": [
+    "Black",
+      "Purple",
+      "Pink",
+      "Transparent Pink",
+      "Transparent Purple",
+      "1 Random Hair Comb"
+    ],
+    "current_price_integer": "1",
+    "current_price_decimal": "64",
     "old_price_integer": "2",
-    "old_price_decimal": "20",
-    "discount_percentage": "9%",
-    "description": "Details:multiple accessoriespattern type:letter, plantsfestivals:non-holidaycolor:multicolormaterial:zinc alloystyle:casualelement:cartoonsku:sc260312135042897623580\n\nDescription\n\nNo Other Material,Non-Holiday,Plants,Letter\n\nDetails: Multiple Accessories Pattern Type: Letter, Plants Festivals: Non-Holiday Color: Multicolor Material: Zinc Alloy Style: Casual Element: Cartoon SKU: sc260312135042897623580\n\nDetails: Multiple Accessories\n\nDetails:\n\nMultiple Accessories\n\nPattern Type:\n\nLetter, Plants\n\nFestivals:\n\nNon-Holiday\n\nColor:\n\nMulticolor\n\nMaterial:\n\nZinc Alloy\n\nStyle:\n\nCasual\n\nElement:\n\nCartoon\n\nSKU:\n\nsc260312135042897623580",
+    "old_price_decimal": "00",
+    "discount_percentage": "18%",
+    "description": "Pattern type:colorblockseason:alltype:styling tool setselement:nonecolor:multicolormaterial:abssku:sc2407011909390033\n\nDescription\n\nColorblock,Styling Tool Sets,ABS\n\nPattern Type: Colorblock Season: All Type: Styling Tool Sets Element: None Color: Multicolor Material: ABS SKU: sc2407011909390033\n\nPattern Type: Colorblock\n\nPattern Type:\n\nColorblock\n\nSeason:\n\nAll\n\nType:\n\nStyling Tool Sets\n\nElement:\n\nNone\n\nColor:\n\nMulticolor\n\nMaterial:\n\nABS\n\nSKU:\n\nsc2407011909390033",
     "description_structured": {
-      "text": "Details:multiple accessoriespattern type:letter, plantsfestivals:non-holidaycolor:multicolormaterial:zinc alloystyle:casualelement:cartoonsku:sc260312135042897623580\n\nDescription\n\nNo Other Material,Non-Holiday,Plants,Letter\n\nDetails: Multiple Accessories Pattern Type: Letter, Plants Festivals: Non-Holiday Color: Multicolor Material: Zinc Alloy Style: Casual Element: Cartoon SKU: sc260312135042897623580\n\nDetails: Multiple Accessories\n\nDetails:\n\nMultiple Accessories\n\nPattern Type:\n\nLetter, Plants\n\nFestivals:\n\nNon-Holiday\n\nColor:\n\nMulticolor\n\nMaterial:\n\nZinc Alloy\n\nStyle:\n\nCasual\n\nElement:\n\nCartoon\n\nSKU:\n\nsc260312135042897623580",
+      "text": "Pattern type:colorblockseason:alltype:styling tool setselement:nonecolor:multicolormaterial:abssku:sc2407011909390033\n\nDescription\n\nColorblock,Styling Tool Sets,ABS\n\nPattern Type: Colorblock Season: All Type: Styling Tool Sets Element: None Color: Multicolor Material: ABS SKU: sc2407011909390033\n\nPattern Type: Colorblock\n\nPattern Type:\n\nColorblock\n\nSeason:\n\nAll\n\nType:\n\nStyling Tool Sets\n\nElement:\n\nNone\n\nColor:\n\nMulticolor\n\nMaterial:\n\nABS\n\nSKU:\n\nsc2407011909390033",
       "attributes": {
-        "Details": "Multiple Accessories Pattern Type: Letter, Plants Festivals: Non-Holiday Color: Multicolor Material: Zinc Alloy Style: Casual Element: Cartoon SKU: sc260312135042897623580",
-        "Pattern Type": "Letter, Plants",
-        "Festivals": "Non-Holiday",
+        "Pattern Type": "Colorblock Season: All Type: Styling Tool Sets Element: None Color: Multicolor Material: ABS SKU: sc2407011909390033",
+        "Season": "All",
+        "Type": "Styling Tool Sets",
+        "Element": "None",
         "Color": "Multicolor",
-        "Material": "Zinc Alloy",
-        "Style": "Casual",
-        "Element": "Cartoon",
-        "SKU": "sc260312135042897623580"
+        "Material": "ABS",
+        "SKU": "sc2407011909390033"
       }
     },
+    "is_international": false
+  },
    ```
 5. The action is executed via **CDP mouse events** (with `ActionChains` fallback for Selenium).
 6. The page is **polled** (`VERIFICATION_POLL_INTERVAL` / `VERIFICATION_POLL_TIMEOUT`) until the URL no longer contains verification patterns and the DOM shows product markers.
