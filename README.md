@@ -142,7 +142,7 @@ shein_web_scraper_testing/
 > Some third-party libraries (such as `undetected-chromedriver` and `pydantic-core`) may not yet support Python 3.12+ / 3.13 / 3.14.
 > For the best compatibility, create the virtual environment using **Python 3.11**.
 
-**Install all dependencies:
+#  Install all dependencies:
 
 ```bash
 pip install -r requirements.txt
