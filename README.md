@@ -223,15 +223,16 @@ Run:
 python setup_session.py
 ```
 
-If SHEIN displays a verification page or CAPTCHA:
+If SHEIN displays a cookie consent popup or a verification page (CAPTCHA):
 
+- Click **Reject All Cookies** (if prompted).
 - Complete the verification manually.
-- Wait until a product page loads.
+- Wait until a normal product page loads.
 - Press **ENTER** in the terminal.
 
 The authenticated Chrome session will be saved inside the `ChromeProfile/` directory and reused by future scraping sessions.
 
-> **Note:** This step usually needs to be performed only once. Occasionally, if SHEIN detects a new verification challenge or the session expires, you may need to complete the verification manually again.
+> **Note:** This step usually needs to be performed only once. After the initial session is saved, the scraper automatically reuses the Chrome profile and attempts to solve future verification challenges using Gemini Vision AI. However, depending on SHEIN's anti-bot protection or session expiration, occasional manual verification may still be required.
 
 ## Step 6 — Run the Complete Pipeline
 
