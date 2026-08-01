@@ -568,9 +568,9 @@ flowchart TD
   ```json
 [
   {
-    "url": "https://us.shein.com/1-10-5pcs-Women-s-Keychain-Back-To-School-Gift-...",
-    "name": "1 - 10 - 5Pcs Women's Keychain Back To School Gift Couple Gift Birthday Gift",
-    "product_name_safe": "1 - 10 - 5Pcs Women's Keychain Back To School Gift Couple Gift Birthday Gift",
+    "url": "https://us.shein.com/1-10-5pcs-Women-s-Keychain-Back-To-School-Gift-Couple-Gift-Birthday-Gift-Wedding-Gift-Holiday-Gift-Party-Favor-Event-Souvenir-Friend-Gift-Bag-Accessory-Car-Accessory-Creative-Teacher-Sister-Gift-Valentine-s-Day-1pc-Handmade-Woven-Cross-Keychain-Jesus-Keychain-Christian-Car-Keychain-Bag-Accessory-Soft-Cross-Keychain-Ring-Bohemian-Decor-Suitable-For-Men-And-Women-Holiday-Decor-Birthday-Gift-p-419770771.html",
+    "name": "1 - 10 - 5Pcs Women'S Keychain Back To School Gift Couple Gift Birthday Gift",
+    "product_name_safe": "1 - 10 - 5Pcs Women'S Keychain Back To School Gift Couple Gift Birthday Gift",
     "sku": "sc260312135042897623580",
     "reviews": "5.00 5.00 Review Policy Top Score in Keyrings & Ke",
     "available_sizes": [
@@ -586,11 +586,11 @@ flowchart TD
     "old_price_integer": "2",
     "old_price_decimal": "20",
     "discount_percentage": "9%",
-    "description": "Details: Multiple Accessories... (truncated)",
+    "description": "Details:multiple accessoriespattern type:letter, plantsfestivals:non-holidaycolor:multicolormaterial:zinc alloystyle:casualelement:cartoonsku:sc260312135042897623580\n\nDescription\n\nNo Other Material,Non-Holiday,Plants,Letter\n\nDetails: Multiple Accessories Pattern Type: Letter, Plants Festivals: Non-Holiday Color: Multicolor Material: Zinc Alloy Style: Casual Element: Cartoon SKU: sc260312135042897623580\n\nDetails: Multiple Accessories\n\nDetails:\n\nMultiple Accessories\n\nPattern Type:\n\nLetter, Plants\n\nFestivals:\n\nNon-Holiday\n\nColor:\n\nMulticolor\n\nMaterial:\n\nZinc Alloy\n\nStyle:\n\nCasual\n\nElement:\n\nCartoon\n\nSKU:\n\nsc260312135042897623580",
     "description_structured": {
-      "text": "Details: Multiple Accessories... (truncated)",
+      "text": "Details:multiple accessoriespattern type:letter, plantsfestivals:non-holidaycolor:multicolormaterial:zinc alloystyle:casualelement:cartoonsku:sc260312135042897623580\n\nDescription\n\nNo Other Material,Non-Holiday,Plants,Letter\n\nDetails: Multiple Accessories Pattern Type: Letter, Plants Festivals: Non-Holiday Color: Multicolor Material: Zinc Alloy Style: Casual Element: Cartoon SKU: sc260312135042897623580\n\nDetails: Multiple Accessories\n\nDetails:\n\nMultiple Accessories\n\nPattern Type:\n\nLetter, Plants\n\nFestivals:\n\nNon-Holiday\n\nColor:\n\nMulticolor\n\nMaterial:\n\nZinc Alloy\n\nStyle:\n\nCasual\n\nElement:\n\nCartoon\n\nSKU:\n\nsc260312135042897623580",
       "attributes": {
-        "Details": "Multiple Accessories",
+        "Details": "Multiple Accessories Pattern Type: Letter, Plants Festivals: Non-Holiday Color: Multicolor Material: Zinc Alloy Style: Casual Element: Cartoon SKU: sc260312135042897623580",
         "Pattern Type": "Letter, Plants",
         "Festivals": "Non-Holiday",
         "Color": "Multicolor",
@@ -601,8 +601,7 @@ flowchart TD
       }
     },
     "is_international": false
-  }
-]
+  },
 ```
 5. The action is executed via **CDP mouse events** (with `ActionChains` fallback for Selenium).
 6. The page is **polled** (`VERIFICATION_POLL_INTERVAL` / `VERIFICATION_POLL_TIMEOUT`) until the URL no longer contains verification patterns and the DOM shows product markers.
