@@ -677,16 +677,16 @@ Developing a reliable scraper for SHEIN required overcoming several engineering 
 
 ---
 
-# ⚠️ Limitations
+## ⚠️ Limitations
 
 Although the scraper is designed to operate autonomously, some limitations are inherent when scraping websites protected by modern anti-bot systems.
 
 - SHEIN may occasionally present new verification challenges that cannot always be solved automatically on the first attempt.
-- During long scraping sessions, the first verification challenge may sometimes require **manual completion**.
-- After manually solving the initial verification, the saved Chrome profile is reused and the scraper generally continues automatically for an extended period.
-- Manual verification is **not required for every product**. It only occurs occasionally depending on SHEIN's security mechanisms.
-- Automatic CAPTCHA solving depends on valid Google Gemini API keys and their available quota.
-- Significant changes to SHEIN's website structure or anti-bot mechanisms may require updates to HTML selectors or verification logic.
+- During long scraping sessions, the initial verification challenge may sometimes require manual completion.
+- After manually solving the initial verification, the saved Chrome profile is reused, allowing the scraper to continue automatically for an extended period.
+- Manual verification is **not** required for every product. It only occurs occasionally depending on SHEIN's anti-bot mechanisms and session state.
+- Automatic CAPTCHA solving depends on valid Google Gemini API keys and sufficient API quota.
+- Significant changes to SHEIN's website structure, HTML layout, or anti-bot mechanisms may require updates to selectors and verification logic.
 - Overall scraping performance depends on network stability, browser stability, and the response time of the target website.
 
 > **Note**
@@ -695,12 +695,12 @@ Although the scraper is designed to operate autonomously, some limitations are i
 
 ---
 
-# 📌 Assumptions
+## 📌 Assumptions
 
 This project assumes the following conditions:
 
 - Google Chrome is installed on the target system.
-- Python dependencies have been installed using `requirements.txt`.
+- Python 3.11 and all required dependencies have been installed successfully.
 - One or more valid Google Gemini API keys are configured in the `.env` file.
 - Internet connectivity is stable.
 - SHEIN product URLs are valid and accessible.
@@ -708,21 +708,15 @@ This project assumes the following conditions:
 
 ---
 
-# 🔮 Future Improvements
+## 🔮 Future Improvements
 
 Potential enhancements include:
 
-- Automatic image downloading.
-- CSV and Excel export options.
-- Database integration (PostgreSQL / MongoDB).
-- Distributed scraping across multiple machines.
-- Proxy rotation support.
-- Docker containerization.
-- Resume interrupted scraping sessions automatically.
-- Interactive web dashboard for monitoring BrowserPool status.
-- Automatic adaptation to new CAPTCHA layouts using improved AI models.
-
----
+- Proxy rotation support for improved scalability.
+- CSV and Excel export in addition to JSON output.
+- Docker containerization for simplified deployment.
+- Automatic resume of interrupted scraping sessions.
+- Interactive dashboard for monitoring scraping progress and browser status.
 
 # 📚 Resources
 
