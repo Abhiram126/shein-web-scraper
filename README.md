@@ -131,7 +131,17 @@ shein_web_scraper_testing/
 
 ## 📋 Requirements
 
-- **Python** >= 3.8
+- Python **3.11 (Recommended)**
+- Google Chrome
+- Playwright Chromium
+- Google Gemini API Key
+
+> **Important**
+>
+> This project has been developed and tested using **Python 3.11**.
+> Some third-party libraries (such as `undetected-chromedriver` and `pydantic-core`) may not yet support Python 3.12+ / 3.13 / 3.14.
+> For the best compatibility, create the virtual environment using **Python 3.11**.
+
 - **Google Chrome** installed (for `undetected-chromedriver`)
 - A **Google Gemini API key** for automated CAPTCHA solving (from [Google AI Studio](https://aistudio.google.com/))
 
