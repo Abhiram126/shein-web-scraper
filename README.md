@@ -150,10 +150,8 @@ Follow these steps to set up and run the SHEIN Web Scraper on a new system.
 
 ```bash
 git clone https://github.com/Abhiram126/shein-web-scraper.git
-cd shein_web_scraper_testing
+cd shein-web-scraper
 ```
-
----
 
 ## Step 2 — Create a Virtual Environment
 
@@ -171,8 +169,6 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
----
-
 ## Step 3 — Install Dependencies
 
 Install all required Python packages.
@@ -181,7 +177,11 @@ Install all required Python packages.
 pip install -r requirements.txt
 ```
 
----
+Install the Playwright browser:
+
+```bash
+playwright install chromium
+```
 
 ## Step 4 — Configure the `.env` File
 
@@ -189,13 +189,13 @@ Create a `.env` file in the project root.
 
 ### Single API Key
 
-```dotenv
+```env
 GEMINI_API_KEY=your_gemini_api_key_here
 ```
 
 ### Multiple API Keys (Recommended)
 
-```dotenv
+```env
 GEMINI_API_KEY=OwnerA:KEY_A,OwnerB:KEY_B,OwnerC:KEY_C
 ```
 
@@ -209,8 +209,6 @@ GEMINI_API_KEY=OwnerA:KEY_A,OwnerB:KEY_B,OwnerC:KEY_C
 | `CHROME_PROFILE_PATH` | Path to an existing Chrome profile |
 | `HEADLESS` | Set to `true` to run headless (default: `false`) |
 | `BROWSER_PROXY` | Optional proxy server for browser instances |
-
----
 
 ## Step 5 — Warm Up a Chrome Profile (Recommended)
 
@@ -228,15 +226,41 @@ If SHEIN displays a verification page or CAPTCHA:
 
 The authenticated Chrome session will be saved inside the `ChromeProfile/` directory and reused by future scraping sessions.
 
-> This step usually needs to be performed only once.
-
----
+> **Note:** This step usually needs to be performed only once. Occasionally, if SHEIN detects a new verification challenge or the session expires, you may need to complete the verification manually again.
 
 ## Step 6 — Run the Complete Pipeline
 
 ```bash
 python run_pipeline.py
 ```
+
+The application will prompt you to select one or more SHEIN categories.
+
+Example:
+
+```text
+1. Women
+2. Men
+3. Kids
+4. Beauty
+...
+26. Sports & Outdoor
+```
+
+Enter one or more category numbers separated by commas.
+
+Example:
+
+```text
+1,3,8
+```
+
+The pipeline then performs:
+
+1. **Phase 1 – URL Discovery**
+2. **Phase 2 – URL Cleaning & Deduplication**
+3. **Phase 3 – Concurrent Product Scraping**
+4. **Automatic JSON Generation** (`Outputs/products.json`)
 
 The application will prompt you to select one or more SHEIN categories.
 
