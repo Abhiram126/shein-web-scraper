@@ -314,24 +314,6 @@ The scraper:
 Outputs/products.json
 ```
 
----
-
-## Verify the Output
-
-To verify the number of successfully scraped products:
-
-```bash
-python -c "import json; print(len(json.load(open('Outputs/products.json', encoding='utf-8'))))"
-```
-
-Example:
-
-```
-159
-```
-
----
-
 # 🧑‍💻 Usage Reference
 
 ## Option A — Full Automated Pipeline (Recommended)
