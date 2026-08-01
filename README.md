@@ -187,6 +187,10 @@ playwright install chromium
 
 Create a `.env` file in the project root.
 
+```bash
+copy .env.example .env
+```
+
 ### Single API Key
 
 ```env
