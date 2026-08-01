@@ -149,7 +149,7 @@ Follow these steps to set up and run the SHEIN Web Scraper on a new system.
 ## Step 1 — Clone the Repository
 
 ```bash
-git clone <YOUR_GITHUB_REPOSITORY_URL>
+git clone https://github.com/Abhiram126/shein-web-scraper.git
 cd shein_web_scraper_testing
 ```
 
