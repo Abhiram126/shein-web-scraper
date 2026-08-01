@@ -566,14 +566,26 @@ flowchart TD
 3. A fresh screenshot is captured and sent to **Gemini Vision**.
 4. Gemini returns a **structured JSON** action plan:
    ```json
-   {
-     "has_verification": true,
-     "verification_type": "checkbox",
-     "action": "click",
-     "target_x": 640,
-     "target_y": 380,
-     "is_cleared": false
-   }
+   ],
+    "current_price_integer": "2",
+    "current_price_decimal": "00",
+    "old_price_integer": "2",
+    "old_price_decimal": "20",
+    "discount_percentage": "9%",
+    "description": "Details:multiple accessoriespattern type:letter, plantsfestivals:non-holidaycolor:multicolormaterial:zinc alloystyle:casualelement:cartoonsku:sc260312135042897623580\n\nDescription\n\nNo Other Material,Non-Holiday,Plants,Letter\n\nDetails: Multiple Accessories Pattern Type: Letter, Plants Festivals: Non-Holiday Color: Multicolor Material: Zinc Alloy Style: Casual Element: Cartoon SKU: sc260312135042897623580\n\nDetails: Multiple Accessories\n\nDetails:\n\nMultiple Accessories\n\nPattern Type:\n\nLetter, Plants\n\nFestivals:\n\nNon-Holiday\n\nColor:\n\nMulticolor\n\nMaterial:\n\nZinc Alloy\n\nStyle:\n\nCasual\n\nElement:\n\nCartoon\n\nSKU:\n\nsc260312135042897623580",
+    "description_structured": {
+      "text": "Details:multiple accessoriespattern type:letter, plantsfestivals:non-holidaycolor:multicolormaterial:zinc alloystyle:casualelement:cartoonsku:sc260312135042897623580\n\nDescription\n\nNo Other Material,Non-Holiday,Plants,Letter\n\nDetails: Multiple Accessories Pattern Type: Letter, Plants Festivals: Non-Holiday Color: Multicolor Material: Zinc Alloy Style: Casual Element: Cartoon SKU: sc260312135042897623580\n\nDetails: Multiple Accessories\n\nDetails:\n\nMultiple Accessories\n\nPattern Type:\n\nLetter, Plants\n\nFestivals:\n\nNon-Holiday\n\nColor:\n\nMulticolor\n\nMaterial:\n\nZinc Alloy\n\nStyle:\n\nCasual\n\nElement:\n\nCartoon\n\nSKU:\n\nsc260312135042897623580",
+      "attributes": {
+        "Details": "Multiple Accessories Pattern Type: Letter, Plants Festivals: Non-Holiday Color: Multicolor Material: Zinc Alloy Style: Casual Element: Cartoon SKU: sc260312135042897623580",
+        "Pattern Type": "Letter, Plants",
+        "Festivals": "Non-Holiday",
+        "Color": "Multicolor",
+        "Material": "Zinc Alloy",
+        "Style": "Casual",
+        "Element": "Cartoon",
+        "SKU": "sc260312135042897623580"
+      }
+    },
    ```
 5. The action is executed via **CDP mouse events** (with `ActionChains` fallback for Selenium).
 6. The page is **polled** (`VERIFICATION_POLL_INTERVAL` / `VERIFICATION_POLL_TIMEOUT`) until the URL no longer contains verification patterns and the DOM shows product markers.
