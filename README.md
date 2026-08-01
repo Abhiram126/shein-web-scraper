@@ -231,7 +231,7 @@ The authenticated Chrome session will be saved inside the `ChromeProfile/` direc
 ## Step 6 — Run the Complete Pipeline
 
 ```bash
-python run_pipeline.py
+python run_pipeline.py --target 100
 ```
 
 The application will prompt you to select one or more SHEIN categories.
