@@ -732,3 +732,8 @@ Potential enhancements include:
 # 🙏 Acknowledgements
 
 This project was developed as part of a technical engineering assignment focused on designing a scalable, AI-assisted web scraping system capable of handling modern anti-bot protected e-commerce websites while maintaining structured, reliable, and incremental data collection.
+
+## 🔗 Repository
+
+**GitHub Repository:**  
+[Abhiram126/shein-web-scraper](https://github.com/Abhiram126/shein-web-scraper)
