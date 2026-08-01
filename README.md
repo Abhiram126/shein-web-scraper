@@ -239,34 +239,6 @@ The application will prompt you to select one or more SHEIN categories.
 Example:
 
 ```text
-1. Women
-2. Men
-3. Kids
-4. Beauty
-...
-26. Sports & Outdoor
-```
-
-Enter one or more category numbers separated by commas.
-
-Example:
-
-```text
-1,3,8
-```
-
-The pipeline then performs:
-
-1. **Phase 1 – URL Discovery**
-2. **Phase 2 – URL Cleaning & Deduplication**
-3. **Phase 3 – Concurrent Product Scraping**
-4. **Automatic JSON Generation** (`Outputs/products.json`)
-
-The application will prompt you to select one or more SHEIN categories.
-
-Example:
-
-```text
 ========================================================
            Available SHEIN Categories
 ========================================================
